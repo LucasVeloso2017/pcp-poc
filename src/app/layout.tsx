@@ -30,7 +30,7 @@ export default function RootLayout({ children }: Readonly<Props>) {
         className={`${dmSans.variable} ${inter.variable} antialiased flex flex-col items-center justify-center`}
       >
         <Header />
-        <main className="w-[80%] min-h-[1000px] flex-1">
+        <main className="w-[100%] min-h-[1000px] flex-1">
           {children}
         </main>
         <Footer />
