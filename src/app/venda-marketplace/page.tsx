@@ -21,87 +21,73 @@ const stats = [
   { value: '+400', label: 'processos por dia' },
 ];
 
-export default function App() {
+export default function Page() {
   return (
-    <main className="bg-white font-sans">
-      <div className="px-px py-12 md:py-20">
-        {/* Wrapper para as seções com espaçamento vertical consistente */}
-        <div className="space-y-12">
+    <main className="w-[80%] py-12 md:py-18 space-y-12 ">
+      <section>
+        <h1 className="font-dm-sans text-6xl font-bold text-[#212529]">
+          Encontre as melhores oportunidades <br /> para expandir o seu negócio
+        </h1>
+        <ul className="flex flex-col space-y-4 mt-8">
+          {features.map((feature, index) => (
+            <li key={index} className="flex items-center space-x-3">
+              <Image
+                src="/icon/SealCheck.png"
+                alt="Ícone de verificação"
+                width={24}
+                height={24}
+                className="flex-shrink-0"
+              />
+              <span className="font-dm-sans font-medium text-2xl text-gray-700">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section className="mt-24">
+        <h1 className="font-inter font-semibold text-5xl text-gray-800 mb-14">
+          Somos facilitadores do seu sucesso em licitações
+        </h1>
 
-          {/* Seção 1: Lista de Oportunidades */}
-          <section>
-            {/* ALTERAÇÕES AQUI:
-              1. Inseri a tag <br /> para forçar a quebra de linha.
-              2. Adicionei a classe 'leading-tight' para diminuir o espaço entre as linhas.
-            */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
-              Encontre as melhores oportunidades <br /> para expandir o seu negócio
-            </h1>
-            <ul className="flex flex-col space-y-4 mt-8">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-center space-x-3">
-                  <Image
-                    src="/icon/SealCheck.png" // Caminho relativo à pasta `public`
-                    alt="Ícone de verificação"
-                    width={24}
-                    height={24}
-                    className="flex-shrink-0"
-                  />
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          {/* Seção 2: Estatísticas */}
-          <section className="space-y-8">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
-              Somos facilitadores do seu sucesso em licitações
-            </h1>
-            
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-4">
-                {stats.map((stat, index) => (
-                  <div
-                    key={index}
-                    className={`
-                      text-center p-8
+        <div className='w-full flex flex-col'>
+          <div className='w-full h-56 rounded-t-[80px] bg-[#E9F8F9] flex items-center justify-center overflow-hidden'>
+            <div className="grid grid-cols-4">
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className={`
+                      text-center p-2
                       ${index < stats.length - 1 ? 'md:border-r' : ''}
                       border-gray-200
                     `}
-                  >
-                    <p className="text-4xl font-bold text-stats-value">
-                      {stat.value}
-                    </p>
-                    <p className="mt-2 text-sm text-stats-label">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
+                >
+                  <p className="font-dm-sans text-5xl font-bold">
+                    {stat.value}
+                  </p>
+                  <p className="mt-2 text-sm text-[#00606C]">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
             </div>
-          </section>
-
-          {/* Seção 3: Venda+ */}
-          <section>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-              Venda+
-            </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
-              <p>
-                Nascemos para fazer a diferença no ecossistema de compras públicas e com isso desde 2016 temos o compromisso em ajudar na realização de processos licitatórios em todo o país. Durante todos esses anos, realizamos milhares de processos em nossa plataforma com total segurança, disponibilidade e suporte técnico.
-              </p>
-              <p>
-                O Portal de Compras Públicas "Portal CP", é um centro de excelência em licitações públicas, um serviço oferecido de forma online, transparente, simples e seguro, mantido pela empresa Ecustomiza Consultoria em Software S/A. O Portal foi feito para atender e facilitar a relação entre a organização pública, a sociedade e os empreendedores. Não utilizamos dinheiro público para manter a nossa operação, por isso, para manter tudo funcionando com excelência, cobramos uma pequena taxa de assinamento do uso da plataforma. Saiba mais {' '}
-                <a href="#" className="text-blue-600 hover:underline font-semibold">
-                  clicando aqui.
-                </a>
-              </p>
-            </div>
-          </section>
-
+          </div>
+          <div className='w-full h-4 bg-[#BBE8ED]'></div>
+          <div className='w-full h-4 bg-[#5FC8D5]'></div>
+          <div className='w-full h-4 bg-[#1AB0C3]'></div>
         </div>
-      </div>
+      </section>
+      <section className="mt-24">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-14">
+          Venda+
+        </h2>
+
+        <p className='w-full font-dm-sans font-normal text-2xl text-[#717171]'>
+          Nascemos para fazer a diferença no ecossistema de compras públicas e com isso desde 2016 temos o compromisso em ajudar na realização de processos licitatórios em todo o país. Durante todos esses anos, realizamos milhares de processos em nossa plataforma com total segurança, disponibilidade e suporte técnico.
+          <br />
+          <br />
+          O Portal de Compras Públicas "Portal CP", é um centro de excelência em licitações públicas, um serviço oferecido de forma online, transparente, simples e seguro, mantido pela empresa Ecustomize Consultoria em Software S/A. O Portal foi feito para atender e facilitar a relação entre a organização pública, a sociedade e os empreendedores. Não utilizamos dinheiro público para manter a nossa operação, por isso, para manter tudo funcionando com excelência cobramos uma pequena taxa de ressarcimento do uso da plataforma. Saiba mais
+          <strong className='font-bold text-[#1AB0C3] cursor-pointer'> clicando aqui.</strong>
+        </p>
+      </section>
     </main>
   );
 }
