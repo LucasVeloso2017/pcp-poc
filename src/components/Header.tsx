@@ -4,7 +4,6 @@ import { FiInfo, FiPhoneCall, FiPlusCircle, FiUser } from 'react-icons/fi';
 import Button from './Button';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { usePathname } from 'next/navigation';
 
 const TabsWrapper = styled.div`
@@ -17,7 +16,7 @@ const TabsWrapper = styled.div`
       content: '';
       position: absolute;
       bottom: 0;
-      top: 48px;
+      top: 50px;
       width: 100%;
       height: 2px;
       background-color: var(--app-brand-secondary-100);
@@ -30,7 +29,7 @@ const Header = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    setCurrentPath(pathname); 
+    setCurrentPath(pathname);
   }, [pathname]);
 
   const pages = [
@@ -93,30 +92,33 @@ const Header = () => {
       </div>
       <div className='w-full h-[80px] py-2 flex justify-center items-center bg-white border-b border-app-neutral-10'>
         <div className='w-[90%] md:w-[80%] flex items-center justify-between'>
-          <div className='flex items-center justify-center gap-5'>
-            <img src='/img/logo.png' alt='logo' className='w-[150px] sm:w-[200px]' />
-            <TabsWrapper className='flex flex-row items-center gap-3'>
+          <div className='w-full flex items-center justify-center gap-5'>
+            <img src='/img/logo.png' alt='logo' className='w-[240px]' />
+            <TabsWrapper className='flex flex-1 flex-row justify-center items-center gap-3'>
               {pages.map((page) => (
                 <div
                   key={page.label}
                   className={`flex items-center ${page.active ? 'active' : ''}`}
                 >
-                  <Link href={page.href} className='SecundriaP2 2xl:SecundriaP1 text-app-neutral-200'>
+                  <Link href={page.href} className='font-dm-sans font-normal text-[14px] text-app-neutral-200'>
                     {page.label}
                   </Link>
                 </div>
               ))}
             </TabsWrapper>
           </div>
-          <Button
-            className='w-[160px] sm:w-[210px]'
-            label='Crie sua conta'
-            variant='yellow'
-            icon={{
-              icon: <FiPlusCircle />,
-              position: 'left',
-            }}
-          />
+          <div>
+            <Button
+              className='w-[210px] sm:w-[210px]'
+              label='Crie sua conta'
+              variant='yellow'
+              icon={{
+                icon: <FiPlusCircle />,
+                position: 'left',
+              }}
+            />
+          </div>
+
         </div>
       </div>
     </>
