@@ -1,9 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 
-
-
-
 // Dados para a lista de features, para manter o código limpo
 const features = [
   'Homologação cadastral 100% online e simplificada',
@@ -26,27 +23,29 @@ const stats = [
 
 export default function App() {
   return (
-    // O fundo branco principal
     <main className="bg-white font-sans">
-      {/* Container principal que centraliza o conteúdo e adiciona padding lateral */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-        {/* Wrapper para as seções*/}
-        <div className="mx-auto space-y-12">
+      <div className="px-px py-12 md:py-20">
+        {/* Wrapper para as seções com espaçamento vertical consistente */}
+        <div className="space-y-12">
 
-          {/* Seção 1: Lista de Oportunidades - Borda removida */}
-          <section className="p-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 max-w-2xl">
-              Encontre as melhores oportunidades para expandir o seu negócio
+          {/* Seção 1: Lista de Oportunidades */}
+          <section>
+            {/* ALTERAÇÕES AQUI:
+              1. Inseri a tag <br /> para forçar a quebra de linha.
+              2. Adicionei a classe 'leading-tight' para diminuir o espaço entre as linhas.
+            */}
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+              Encontre as melhores oportunidades <br /> para expandir o seu negócio
             </h1>
-             <ul className="flex flex-col space-y-4 mt-8 max-w-2xl">
+            <ul className="flex flex-col space-y-4 mt-8">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-center space-x-3">
                   <Image
                     src="/icon/SealCheck.png" // Caminho relativo à pasta `public`
                     alt="Ícone de verificação"
-                    width={24} // Obrigatório: Largura do ícone em pixels (h-6 w-6 = 24px)
-                    height={24} // Obrigatório: Altura do ícone em pixels
-                    className="flex-shrink-0" // Classes de layout ainda funcionam
+                    width={24}
+                    height={24}
+                    className="flex-shrink-0"
                   />
                   <span className="text-gray-700">{feature}</span>
                 </li>
@@ -55,17 +54,12 @@ export default function App() {
           </section>
 
           {/* Seção 2: Estatísticas */}
-          <section className="space-y-8"> {/* Adicionado space-y-8 para espaçar o título do card */}
-
-            {/* TÍTULO DE VOLTA, ALINHADO À ESQUERDA */}
+          <section className="space-y-8">
             <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
               Somos facilitadores do seu sucesso em licitações
             </h1>
             
-            {/* CARD COM FUNDO BRANCO E SOMBRA */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            
-              {/* Grid para os itens de estatística */}
               <div className="grid grid-cols-1 md:grid-cols-4">
                 {stats.map((stat, index) => (
                   <div
@@ -73,10 +67,9 @@ export default function App() {
                     className={`
                       text-center p-8
                       ${index < stats.length - 1 ? 'md:border-r' : ''}
-                      border-gray-200 {/* Cor da borda ajustada para cinza claro */}
+                      border-gray-200
                     `}
                   >
-                    {/* Cores do texto ajustadas para tons de cinza padrão */}
                     <p className="text-4xl font-bold text-stats-value">
                       {stat.value}
                     </p>
@@ -90,7 +83,7 @@ export default function App() {
           </section>
 
           {/* Seção 3: Venda+ */}
-          <section className="p-8">
+          <section>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
               Venda+
             </h2>
