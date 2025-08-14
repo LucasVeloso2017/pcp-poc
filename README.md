@@ -1,36 +1,9 @@
-# PCP Marketplace Frontend
-
-## Introduction
-
-PCP Marketplace is a comprehensive web marketplace platform that bridges the gap between suppliers and buyers in a unified ecosystem. This frontend application provides an intuitive interface for both supplier and buyer perspectives, enabling seamless product discovery, catalog management, and procurement processes.
-
-The platform focuses on creating an efficient marketplace experience where suppliers can showcase their products with detailed specifications and characteristics, while buyers can easily search, filter, and select products that meet their specific requirements.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-### Prerequisites
+First, run the development server:
 
-- Node.js 18+ 
-- npm, yarn, pnpm, or bun
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone <repository-url>
-cd PCP.Marketplace.FrontEnd
-```
-
-2. Install dependencies
-```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
-```
-
-3. Run the development server
 ```bash
 npm run dev
 # or
@@ -41,64 +14,20 @@ pnpm dev
 bun dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Project Structure
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable UI components
-│   ├── ActionCard/      # Action selection cards
-│   └── CardProduct/     # Product display cards
-├── features/            # Feature-specific modules
-│   └── Supplier/        # Supplier-related features
-│       └── Catalog/     # Product catalog functionality
-├── hooks/               # Custom React hooks
-├── services/            # API services
-├── types/               # TypeScript type definitions
-├── utils/               # Utility functions
-└── styles/              # Global styles and themes
-```
-
-## Technologies
-
-### Core Technologies
-- **Next.js 15** - React framework with App Router
-- **React 18** - UI library with modern hooks
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
-
-### Development Tools
-- **ESLint** - Code linting and quality
-- **PostCSS** - CSS processing
-- **Turbopack** - Ultra-fast bundler for development
-
-### UI Components
-- **Lucide React** - Beautiful icon library
-- **Next/Image** - Optimized image component
-
-### Key Features
-- **SSO Integration Ready** - Prepared for Single Sign-On authentication
-- **Responsive Design** - Mobile-first approach
-- **Component Architecture** - Modular and reusable components
-- **Type Safety** - Full TypeScript implementation
-- **Performance Optimized** - Next.js optimizations and best practices
-
-### Design System
-- **Figma Specifications** - Pixel-perfect implementation following design specs
-- **Custom Typography** - DM Sans and Inter font families
-- **Consistent Spacing** - Standardized margins and paddings
-- **Color Palette** - Carefully selected color scheme for marketplace UX
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
 
-To learn more about the technologies used:
+To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API
-- [React Documentation](https://reactjs.org/docs) - Learn about React
-- [TypeScript Documentation](https://www.typescriptlang.org/docs) - Learn about TypeScript
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs) - Learn about Tailwind CSS
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 

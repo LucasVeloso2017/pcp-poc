@@ -22,7 +22,7 @@
 @theme inline {
   --font-dm-sans: var(--font-dm-sans);
   --font-inter: var(--font-inter);
-
+  
   --color-app-blue-500-10: var(--app-blue-500-10) /* rgba(39, 138, 255, 0.1) */;
   --color-app-blue-500: var(--app-blue-500) /* rgba(39, 138, 255, 0.1) */;
   --color-app-blue-550: var(--app-blue-550) /* rgba(39, 138, 255, 0.1) */;
@@ -146,11 +146,11 @@
 }
 
 body {
-
+  
 }
 
 img {
   image-rendering: auto; /* Smooth scaling for images */
   -webkit-image-rendering: auto; /* For Webkit-based browsers */
   image-rendering: -webkit-optimize-contrast; /* For smoother scaling on webkit browsers */
-}
+} 
