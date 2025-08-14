@@ -1,0 +1,84 @@
+.container {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    padding: 2%;
+    opacity: 1;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 1rem;
+}
+
+.title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+    line-height: 40px;
+    letter-spacing: -0.9px;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--color-azure-11, #111827);
+}
+
+.subTitle {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-style: 9pt Regular;
+    font-size: 17.16px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: var(--color-grey-46, #6B7280);
+}
+
+.containerCards {
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 4rem;
+}
+
+.card {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: font size/16;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--color-grey-10, #1A1A1A);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem
+}
+
+.card h1{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #1AB0C3;
+}
+
+.card p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--color-grey-47, #777777);
+
+}
+

@@ -6,9 +6,9 @@ interface Props {
   label:string
   icon?:{
    position:'left' | 'right'
-   icon:React.ReactNode
+   icon:  React.ReactNode
   }
-  variant: 'blue' | 'yellow'
+  variant: 'blue' | 'yellow' | ''
   className?:string
 }
 

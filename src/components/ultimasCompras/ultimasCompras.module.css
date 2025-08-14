@@ -1,0 +1,33 @@
+.container {
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    padding: 2%;
+    opacity: 1;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 1rem;
+}
+
+.title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+    line-height: 40px;
+    letter-spacing: -0.9px;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--color-azure-11, #111827);
+}
+
+.subTitle {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-style: 9pt Regular;
+    font-size: 17.16px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: var(--color-grey-46, #6B7280);
+}

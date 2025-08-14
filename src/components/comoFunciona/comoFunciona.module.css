@@ -1,0 +1,94 @@
+.container {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    padding: 2%;
+    opacity: 1;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 1rem;
+    background-color: #FCF4E680;
+}
+
+.title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+    line-height: 40px;
+    letter-spacing: -0.9px;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--color-azure-11, #111827);
+}
+
+.subTitle {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-style: 9pt Regular;
+    font-size: 17.16px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: var(--color-grey-46, #6B7280);
+}
+
+.infoContainer {
+    margin: 4%;
+    width: 90%;
+    height: 100%;
+    border-radius: 16px;
+    gap: 6;
+    opacity: 1;
+    top: 2322px;
+    left: 347px;
+    border-width: stroke weight/1;
+    padding: 29px;
+
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5
+}
+
+.suppliersCredential {
+    width: 35%;
+    height: 44;
+    border-radius: 12px;
+    padding-top: 13px;
+    padding-right: 19px;
+    padding-bottom: 13px;
+    padding-left: 19px;
+    opacity: 1;
+    border-width: stroke weight/1;
+    color: #1AB0C3;
+
+
+    background: #FFFFFF;
+    border: 1px solid #1AB0C3
+}
+
+.suppliers {
+    width: 35%;
+    height: 44;
+    border-radius: 12px;
+    padding-top: 13px;
+    padding-right: 19px;
+    padding-bottom: 13px;
+    padding-left: 19px;
+    opacity: 1;
+    border-width: stroke weight/1;
+    color: var(--color-azure-27, #374151);
+
+    border: 1px solid #E5E7EB;
+    background: #FFFFFF;
+
+}
+
+.buttonsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: auto;
+    margin-top: 8px;
+    width: 100%;
+}
