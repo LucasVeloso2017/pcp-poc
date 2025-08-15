@@ -1,8 +1,11 @@
 'use client'
+import AdvancedFilters from "@/components/AdvancedFilters";
 import Button from "@/components/Button";
+import BuyCard from "@/components/BuyCard";
 import Etapas from "@/components/Etapas";
+import Filter from "@/components/Filter";
 import LastBuyCard from "@/components/LastBuyCard";
-import { PiCheckCircle, PiEye, PiFileText, PiListChecks, PiPlus, PiSealCheck, PiShoppingCart, PiUser } from "react-icons/pi";
+import { PiCheckCircle, PiEye, PiFileText, PiListChecks, PiMagnifyingGlass, PiMagnifyingGlassMinus, PiPlus, PiSealCheck, PiShoppingCart, PiUser } from "react-icons/pi";
 
 const etapas = [
   {
@@ -109,7 +112,7 @@ return (
             </div>
             <br />
             <div className="w-full h-[72px]">
-              {/** advanced filters */}
+              <AdvancedFilters />
             </div>
             <div className="mt-15 w-full flex items-center gap-5">
               <Button
@@ -126,7 +129,7 @@ return (
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-center py-15 ">
+      <div className="w-full flex justify-center py-15">
         <div className="w-[80%] flex flex-col items-center justify-center">
           <h1 className="font-dm-sans font-bold text-[48px] text-[#1A1A1A]">Nossas Soluções</h1>
           <h4 className="font-inter font-normal text-lg text-[#555555]">Plataforma completa para todas as necessidades de compras públicas</h4>
@@ -231,10 +234,13 @@ return (
           <h1 className="font-dm-sans font-bold text-[48px] text-[#1A1A1A]">Últimas Compras realizadas</h1>
           <h4 className="font-inter font-normal text-lg text-[#555555] mb-16">Os maiores processos de compras em execução ou recém-finalizados, com total transparência para a sociedade</h4>
 
-          <div className="w-full flex items-center justify-center gap-7">
-            <LastBuyCard {...compras[0]}/>
+          <div className="w-full flex items-center justify-center gap-4">
+            <BuyCard/>
+            <BuyCard/>
+            <BuyCard/>
+            {/* <LastBuyCard {...compras[0]}/>
             <LastBuyCard {...compras[1]}/>
-            <LastBuyCard {...compras[2]}/>
+            <LastBuyCard {...compras[2]}/> */}
           </div>
         </div>
       </div>
