@@ -93,7 +93,7 @@ export default function Page() {
 
             <div className="w-auto space-y-4 md:space-y-6 lg:space-y-8">
               {regionalSupport.map((support) => (
-                <div key={support.region} className="w-full bg-white rounded-2xl border border-[#D1EFF3] px-3 py-4 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between overflow-hidden relative">
+                <div key={support.region} className="w-full bg-white rounded-2xl border border-[#D1EFF3] px-3 py-4  flex flex-col sm:flex-row items-start sm:items-center justify-between overflow-hidden relative">
                   <div className="flex items-center gap-3 md:gap-4 w-full mr-10">
                     <PiPhoneCall className="w-6 h-6 md:w-8 md:h-8 text-[#0085AC]" />
                     <div className="flex-1">
