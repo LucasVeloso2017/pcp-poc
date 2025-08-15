@@ -205,7 +205,7 @@ return (
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-center py-15 bg-[#FCF4E6]">
+      <div className="w-full flex justify-center py-15">
         <div className="w-[80%] flex flex-col items-center justify-center">
           <h1 className="font-dm-sans font-bold text-[48px] text-[#1A1A1A]">Como Funciona</h1>
           <h4 className="font-inter font-normal text-lg text-[#555555] mb-16">Um processo transparente e eficiente que garante a melhor aplicação dos recursos públicos</h4>
