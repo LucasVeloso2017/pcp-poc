@@ -1,7 +1,14 @@
+'use client'
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
+
 export default function Home() {
-  return (
-    <div className="">
-      HomePage
-    </div>
-  );
+  const router = useRouter()
+
+  useEffect(() =>{
+    router.push('/compras-publicas')
+  },[])
+
+  return null;
 }
