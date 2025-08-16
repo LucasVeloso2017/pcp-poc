@@ -71,10 +71,10 @@ export default function Home() {
 return (
     <div className="w-full bg-white">
       <div
-        className="w-full h-[896px] bg-cover bg-right bg-no-repeat flex"
+        className="w-full h-[896px] bg-cover bg-right bg-no-repeat flex justify-center"
         style={{ backgroundImage: `url(/img/bg-hero-pcp.png)`, backgroundPosition: '78% center' }}
       >
-        <div className="w-[80%] flex justify-center pt-48">
+        <div className="w-[80%] pt-48">
           <div className="w-[920px] flex flex-col">
             <h1 className="font-dm-sans text-[40px] leading-[130%] font-bold text-[#081E2D]">
               Marketplace - Onde Governo e Mercado fecham negócios rápidos com transparência.

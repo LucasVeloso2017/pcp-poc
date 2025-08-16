@@ -24,10 +24,10 @@ export default function Page() {
   return (
     <div className="w-full bg-white">
       <div
-        className="w-full h-[808px] bg-cover bg-right bg-no-repeat flex"
+        className="w-full h-[808px] bg-cover bg-right bg-no-repeat flex justify-center"
         style={{ backgroundImage: `url(/img/bg-hero-contact.png)`, backgroundPosition: '86% center' }}
       >
-        <div className="w-[80%] pt-48 flex justify-center">
+        <div className="w-[80%] pt-48">
           <div className="w-[920px] flex flex-col">
             <p className="font-dm-sans font-bold text-[58px] text-[#333333] leading-16">
               Fale com o Portal <br /> de Compras Públicas
