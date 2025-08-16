@@ -3,9 +3,7 @@ import React from 'react';
 
 // Dados para a lista de features, para manter o código limpo
 const features = [
-  'Homologação cadastral 100% online e simplificada',
-  'Suporte via chat, telefone, whatsapp e email',
-  'Gestão de processos online',
+
   'Negociação em tempo real com ente comprador',
   'Avisos de licitações de baixa concorrência com IA',
   'Pedidos de impugnação de edital, dúvidas e esclarecimento',
@@ -25,23 +23,43 @@ export default function Page() {
   return (
     <main className="w-[80%] py-12 md:py-18 space-y-12 ">
       <section>
-        <h1 className="font-dm-sans text-6xl font-bold text-[#212529]">
+        <h1 className="font-dm-sans text-[58px] leading-[130%] font-bold text-[#212529]">
           Encontre as melhores oportunidades <br /> para expandir o seu negócio
         </h1>
-        <ul className="flex flex-col space-y-4 mt-8">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-center space-x-3">
-              <Image
-                src="/icon/SealCheck.png"
-                alt="Ícone de verificação"
-                width={24}
-                height={24}
-                className="flex-shrink-0"
-              />
-              <span className="font-dm-sans font-medium text-2xl text-gray-700">{feature}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="flex flex-col space-y-4 mt-8">
+          <div className="flex items-center space-x-3">
+            <Image src="/icon/SealCheck.png" alt="Ícone de verificação" width={24} height={24} className="flex-shrink-0"/>
+            <span className="font-dm-sans font-medium text-[24px] text-[#717171]">Homologação cadastral <strong className='text-black'>100% online e simplificada</strong></span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <Image src="/icon/SealCheck.png" alt="Ícone de verificação" width={24} height={24} className="flex-shrink-0"/>
+            <span className="font-dm-sans font-medium text-[24px] text-[#717171]">Suporte via chat, telefone, whatsapp e email</span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <Image src="/icon/SealCheck.png" alt="Ícone de verificação" width={24} height={24} className="flex-shrink-0"/>
+            <span className="font-dm-sans font-medium text-[24px] text-[#717171]">Gestão de processos online</span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <Image src="/icon/SealCheck.png" alt="Ícone de verificação" width={24} height={24} className="flex-shrink-0"/>
+            <span className="font-dm-sans font-medium text-[24px] text-[#717171]">Negociação em tempo real com ente comprador</span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <Image src="/icon/SealCheck.png" alt="Ícone de verificação" width={24} height={24} className="flex-shrink-0"/>
+            <span className="font-dm-sans font-medium text-[24px] text-[#717171]">Avisos de licitações de baixa concorrência com IA</span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <Image src="/icon/SealCheck.png" alt="Ícone de verificação" width={24} height={24} className="flex-shrink-0"/>
+            <span className="font-dm-sans font-medium text-[24px] text-[#717171]">Pedidos de impugnação de edital, dúvidas e esclarecimento</span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <Image src="/icon/SealCheck.png" alt="Ícone de verificação" width={24} height={24} className="flex-shrink-0"/>
+            <span className="font-dm-sans font-medium text-[24px] text-[#717171]">Acesso ilimitado à nossa Escola de Licitações EAD</span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <Image src="/icon/SealCheck.png" alt="Ícone de verificação" width={24} height={24} className="flex-shrink-0"/>
+            <span className="font-dm-sans font-medium text-[24px] text-[#717171]">Treinamento ao vivo para uso da plataforma com ambiente exclusivo de testes</span>
+          </div>
+        </div>
       </section>
       <section className="mt-24">
         <h1 className="font-inter font-semibold text-5xl text-gray-800 mb-14">
