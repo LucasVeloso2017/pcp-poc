@@ -1,13 +1,64 @@
 import Button from "@/components/Button";
-import { PiDownload, PiDownloadSimple, PiEnvelope, PiMailbox } from "react-icons/pi";
+import { PiDownloadSimple, PiEnvelope, PiMailbox } from "react-icons/pi";
 
 export default function Page() {
   return (
     <div className="w-full bg-white">
-      
+      <div
+        className="w-full h-[808px] bg-cover bg-right bg-no-repeat flex justify-center"
+        style={{ backgroundImage: `url(/img/bg-hero-yellow.png)`, backgroundPosition: '86% center' }}
+      >
+        <div className="w-[80%] pt-18">
+          <div className="w-[920px] flex flex-col">
+            <p className="font-dm-sans font-bold text-[58px] text-[#333333] leading-16">
+              Quero aderir ao <br />
+              Portal de Compras Públicas
+            </p>
+            <p className="font-dm-sans font-normal text-[20px] text-[#212529] mt-4">
+              Fazer um cadastro no Portal de Compras Públicas é muito fácil.<br />
+              Confira o passo a passo logo abaixo.
+            </p>
+            <div className="flex items-center justify-center gap-[16px] mt-[88px]">
+              <div className="w-full flex flex-col py-4 items-center justify-center bg-[#F7A622]/10 rounded-[8px]">
+                <div className="w-8 h-8 bg-[#F7A622] rounded-[12px] flex items-center justify-center">
+                  <span className="font-mono text-[#333333]">1</span>
+                </div>
+                <h1 className="font-dm-sans text-[16px] font-bold text-[#333333]">Preparar Documentação</h1>
+                <p className="font-inter font-normal text-[12px] text-[#333333] text-center">
+                  Organizar a documentação <br />
+                  comercial necessária
+                </p>
+              </div>
+              <div className="w-[100px] h-[2px] bg-[#F7A622]"></div>
+              <div className="w-full flex flex-col py-4 items-center justify-center bg-[#F7A622]/10 rounded-[8px]">
+                <div className="w-8 h-8 bg-[#F7A622] rounded-[12px] flex items-center justify-center">
+                  <span className="font-mono text-[#333333]">2</span>
+                </div>
+                <h1 className="font-dm-sans text-[16px] font-bold text-[#333333]">Enviar Documentos</h1>
+                <p className="font-inter font-normal text-[12px] text-[#333333] text-center">
+                  Nossa equipe analisa e verifica <br />
+                  suas informações
+                </p>
+              </div>
+              <div className="w-[100px] h-[2px] bg-[#F7A622]"></div>
+              <div className="w-full flex flex-col py-4 items-center justify-center bg-[#F7A622]/10 rounded-[8px]">
+                <div className="w-8 h-8 bg-[#F7A622] rounded-[12px] flex items-center justify-center">
+                  <span className="font-mono text-[#333333]">3</span>
+                </div>
+                <h1 className="font-dm-sans text-[16px] font-bold text-[#333333]">Acesso ao Portal</h1>
+                <p className="font-inter font-normal text-[12px] text-[#333333] text-center">
+                  Obtenha credenciais e comece <br />
+                  a licitar contratos
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
       <div className="w-full flex justify-center py-8">
         <div className="w-[80%] flex flex-col">
-
           <div className="w-full px-[178px] py-[48px] flex flex-col items-start justify-center bg-white rounded-xl shadow-lg">
             <div className="flex items-center justify-start gap-2">
               <div className="w-12 h-12 flex items-center justify-center bg-[#F9D18F] rounded-[12px]">

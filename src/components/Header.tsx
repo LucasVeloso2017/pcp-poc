@@ -5,6 +5,7 @@ import Button from './Button';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 const TabsWrapper = styled.div`
   .active {
@@ -93,7 +94,7 @@ const Header = () => {
       <div className='w-full h-[80px] py-2 flex justify-center items-center bg-white border-b border-app-neutral-10'>
         <div className='w-[90%] md:w-[80%] flex items-center justify-between'>
           <div className='w-full flex items-center justify-center gap-5'>
-            <img src='/img/logo.png' alt='logo' className='w-[240px]' />
+            <img src='/img/logo.png' alt='logo' className='w-[240px] cursor-pointer' onClick={() => window.location.href = '/'}/>
             <TabsWrapper className='flex flex-1 flex-row justify-center items-center gap-3'>
               {pages.map((page) => (
                 <div
