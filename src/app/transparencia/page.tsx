@@ -2,22 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
-  PiShoppingCart, 
-  PiHourglassSimpleHigh,
-  PiClockClockwise, 
-  PiHandCoins,
-  PiTruckTrailer,
-  PiAcorn,
+
   PiFileText,
   PiChartLineUp,
   PiShieldCheck,
-  PiChatCircleDots,
-  PiPlugsConnected,
-  PiCertificate,
-  PiMagnifyingGlass,
-  PiBell,
-  PiChartBar,
-  PiCode,
   PiCloud,
   PiCursorClick,
   PiChatsCircle,
@@ -25,60 +13,6 @@ import {
   PiPhoneCall,
   PiHandPointing,
 } from 'react-icons/pi';
-// Array de dados para a seção de Compromissos
-const commitments = [
-  {
-    icon: '/icon/Vector.png',
-    title: 'Acesso Aberto à Informação',
-    text: 'Toda a informação sobre as licitações realizadas por meio do Compras Públicas está disponível para acesso e download, sem necessidade de cadastro.',
-  },
-  {
-    icon: '/icon/Vector (1).png',
-    title: 'Rastreamento de Licitações',
-    text: 'Disponibilizamos o acompanhamento completo para que o cidadão possa fiscalizar todo o processo licitatório, incluindo possíveis mudanças contratuais.',
-  },
-  {
-    icon: '/icon/Vector (2).png',
-    title: 'Integridade e Confiabilidade',
-    text: 'Todos os dados são verificados e mantidos em uma plataforma com a mais alta tecnologia, garantindo um ambiente seguro e confiável para todas as partes envolvidas.',
-  },
-  {
-    icon: '/icon/Vector (3).png',
-    title: 'Atendimento Aberto e Eficiente',
-    text: 'Nosso canal de atendimento está sempre preparado para atender com agilidade e transparência, garantindo que todas as informações sejam disponibilizadas de forma ágil e eficiente.',
-  },
-  {
-    icon: '/icon/Vector (9).png',
-    title: 'Integrações',
-    text: 'Integrações nativas com o Transferegov.br (antigo Portal de Convênios do Governo Federal), para que todos os processos que utilizam recursos federais sejam fiscalizados.',
-  },
-  {
-    icon: '/icon/Vector (8).png',
-    title: 'Selos e Certificações de Qualidade',
-    text: 'O Portal de Compras Públicas, preocupado com a segurança e qualidade dos serviços, possui certificações ISO 9001, ISO 27001 e ISO 27701, que mantêm a segurança da informação, a privacidade e a governança dos serviços da tecnologia.',
-  },
-  {
-    icon: '/icon/Vector (3).png',
-    title: 'Busca de Licitações',
-    text: 'Filtros maleáveis por valor, data, nome ou alerta inteligente para encontrar a melhor oportunidade de negócio.',
-  },
-  {
-    icon: '/icon/Vector (9).png',
-    title: 'Notificações Personalizadas',
-    text: 'Configure alertas para ser informado de novas licitações que correspondam às suas pesquisas e interesses.',
-  },
-  {
-    icon: '/icon/Vector (8).png',
-    title: 'Relatórios de Desempenho',
-    text: 'Acompanhe relatórios detalhados e interativos de participação em licitações e concorrentes, para ajudar a aprimorar a sua competitividade.',
-  },
-  {
-    icon: '/icon/Vector (9).png', 
-    title: 'API de Dados Públicos',
-    text: 'Informações disponibilizadas gratuitamente e machine-readable (para leitura por máquinas), em formato aberto, para que possam ser reutilizadas em aplicações de controle social e pesquisa.',
-  }
-];
-
 
 export default function ContatoPage() {
   return (
@@ -221,38 +155,224 @@ export default function ContatoPage() {
         </div>
       </section>
       
+      
       {/* Seção "Compromissos de Transparência" */}
-     <section className="bg-white pt-8 pb-16 lg:pb-20">
-        <div className="container  px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl  mb-16 ">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#333333]">
-              Compromissos de Transparência
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-            {commitments.map((item) => (
-              <div key={item.title}>
-                <div className="flex-shrink-0 mb-4"> {/* Adicionada margem inferior */}
-                  <Image src={item.icon} alt={`Ícone para ${item.title}`} width={24} height={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg text-gray-800">{item.title}</h4>
-                  <p className="text-gray-600 mt-2 text-sm">{item.text}</p>
-                </div>
-                 {/* Barra movida para o final do card principal */}
-                <div className="mt-auto pt-4">
-                  <div className="h-1 w-full bg-orange-200 rounded-full"></div>
-                </div>
+      <section className="bg-white pt-8 pb-16 lg:pb-20">
+          <div className="container px-4 sm:px-6 lg:px-8">
+              <div className="max-w-4xl mb-16">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-[#333333]">
+                      Compromissos de Transparência
+                  </h2>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
 
+                  {/* Card 1: Acesso Aberto à Informação */}
+                  <div className="flex flex-col">
+                      <div className="flex-grow">
+                          <div className="flex-shrink-0 mb-4">
+                              <PiFileText className="w-6 h-6 text-[#F7A622]" />
+                          </div>
+                          <div>
+                              <h4 className="font-bold text-lg text-gray-800">Acesso Aberto à Informação</h4>
+                              <p className="text-gray-600 mt-2 text-sm">Todas as licitações publicadas no Portal de Compras Públicas estão disponíveis para consulta por qualquer cidadão, sem necessidade de cadastro prévio.</p>
+                          </div>
+                      </div>
+                      <div className="mt-auto pt-4">
+                        {/* Barra de Progresso */}
+                        <div className="flex w-full h-[16px]  overflow-hidden">
+                          <div className="w-[440px] bg-[#F7A622]"></div>
+                          <div className="bg-[#FCF4E6]"></div>
+                        </div>
+                      </div>
+                  </div>
+
+                  {/* Card 2: Rastreamento de Licitações */}
+                  <div className="flex flex-col">
+                      <div className="flex-grow">
+                          <div className="flex-shrink-0 mb-4">
+                              <PiChartLineUp className="w-6 h-6 text-[#F7A622]" />
+                          </div>
+                          <div>
+                              <h4 className="font-bold text-lg text-gray-800">Rastreamento de Licitações</h4>
+                              <p className="text-gray-600 mt-2 text-sm">Permitimos que os usuários acompanhem em tempo real o andamento de cada processo, garantindo visibilidade a atualizações frequentes sobre mudanças, aditamentos ou novos eventos.</p>
+                          </div>
+                      </div>
+                     <div className="mt-auto pt-4">
+                    {/* Barra de Progresso */}
+                    <div className="flex w-full h-[16px]  overflow-hidden">
+                        <div className="w-[440px] bg-[#F9C064]"></div>
+                        <div className="bg-[#F9C064]"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card 3: Integridade e Confiabilidade */}
+                  <div className="flex flex-col">
+                      <div className="flex-grow">
+                          <div className="flex-shrink-0 mb-4">
+                              <PiShieldCheck className="w-6 h-6 text-[#F7A622]" />
+                          </div>
+                          <div>
+                              <h4 className="font-bold text-lg text-gray-800">Integridade e Confiabilidade</h4>
+                              <p className="text-gray-600 mt-2 text-sm">Todos os dados são verificados e mantidos em conformidade com as regulações vigentes, assegurando um ambiente seguro e confiável para todas as partes envolvidas.</p>
+                          </div>
+                      </div>
+                     <div className="mt-auto pt-4">
+                      {/* Barra de Progresso */}
+                      <div className="flex w-full h-[16px]  overflow-hidden">
+                          <div className="w-[440px] bg-[#F9D18F]"></div>
+                          <div className="bg-[#F9D18F]"></div>
+                        </div>
+                      </div>
+                  </div>
+
+                  {/* Card 4: Atendimento Aberto e Eficiente */}
+                  <div className="flex flex-col">
+                      <div className="flex-grow">
+                          <div className="flex-shrink-0 mb-4">
+                              <PiChatsCircle className="w-6 h-6 text-[#F7A622]" />
+                          </div>
+                          <div>
+                              <h4 className="font-bold text-lg text-gray-800">Atendimento Aberto e Eficiente</h4>
+                              <p className="text-gray-600 mt-2 text-sm">Nossa central de atendimento está sempre à disposição para esclarecer dúvidas sobre qualquer aspecto dos processos, assegurando que todas as informações necessárias sejam disponibilizadas de forma ágil e eficiente.</p>
+                          </div>
+                      </div>
+                      <div className="mt-auto pt-4">
+                      {/* Barra de Progresso */}
+                      <div className="flex w-full h-[16px]  overflow-hidden">
+                          <div className="w-[440px] bg-[#F9D18F]"></div>
+                          <div className="bg-[#F9D18F]"></div>
+                        </div>
+                      </div>
+                  </div>
+
+                  {/* Card 5: Integrações */}
+                  <div className="flex flex-col">
+                      <div className="flex-grow">
+                          <div className="flex-shrink-0 mb-4">
+                              <PiCloud className="w-6 h-6 text-[#F7A622]" />
+                          </div>
+                          <div>
+                              <h4 className="font-bold text-lg text-gray-800">Integrações</h4>
+                              <p className="text-gray-600 mt-2 text-sm">Integrações nativas com o TransfereGov e o PNCP para fornecer a devida transparência aos processos que acontecem no Portal de Compras Públicas.</p>
+                          </div>
+                      </div>
+                     <div className="mt-auto pt-4">
+                        {/* Barra de Progresso */}
+                        <div className="flex w-full h-[16px]  overflow-hidden">
+                          <div className="w-[440px] bg-[#FBE3BB]"></div>
+                          <div className="bg-[#FBE3BB]"></div>
+                      </div>
+                </div>
+                  </div>
+
+                  {/* Card 6: Selos e Certificações de Qualidade */}
+                  <div className="flex flex-col">
+                      <div className="flex-grow">
+                          <div className="flex-shrink-0 mb-4">
+                              <PiMedal className="w-6 h-6 text-[#F7A622]" />
+                          </div>
+                          <div>
+                              <h4 className="font-bold text-lg text-gray-800">Selos e Certificações de Qualidade</h4>
+                              <p className="text-gray-600 mt-2 text-sm">O Portal de Compras Públicas, preocupado com a qualidade e segurança de seus serviços tem as certificações internacionais ISO 9001, 27001, 27701 e 2000-1, que certificam a segurança da informação, a qualidade dos serviços e a governança dos serviços de tecnologia.</p>
+                          </div>
+                      </div>
+                     <div className="mt-auto pt-4">
+                        {/* Barra de Progresso */}
+                        <div className="flex w-full h-[16px]  overflow-hidden">
+                          <div className="w-[440px] bg-[#FCF4E6]"></div>
+                          <div className="bg-[#FCF4E6]"></div>
+                      </div>
+                </div>
+                  </div>
+                  
+                  {/* Card 7: Busca de Licitações */}
+                  <div className="flex flex-col">
+                      <div className="flex-grow">
+                          <div className="flex-shrink-0 mb-4">
+                              <PiCursorClick className="w-6 h-6 text-[#F7A622]" />
+                          </div>
+                          <div>
+                              <h4 className="font-bold text-lg text-gray-800">Busca de Licitações</h4>
+                              <p className="text-gray-600 mt-2 text-sm">Filtre licitações por setor, valor, prazo e outros critérios para encontrar as melhores oportunidades de negócio.</p>
+                          </div>
+                      </div>
+                      <div className="mt-auto pt-4">
+                        {/* Barra de Progresso */}
+                        <div className="flex w-full h-[16px]  overflow-hidden">
+                          <div className="w-[440px] bg-[#F9D18F]"></div>
+                          <div className="bg-[#F9D18F]"></div>
+                      </div>
+                </div>
+                  </div>
+                  
+                  {/* Card 8: Notificações Personalizadas */}
+                  <div className="flex flex-col">
+                      <div className="flex-grow">
+                          <div className="flex-shrink-0 mb-4">
+                              <PiHandPointing className="w-6 h-6 text-[#F7A622]" />
+                          </div>
+                          <div>
+                              <h4 className="font-bold text-lg text-gray-800">Notificações Personalizadas</h4>
+                              <p className="text-gray-600 mt-2 text-sm">Configure alertas para ser informado de novas licitações que correspondam ao seu perfil de fornecedor.</p>
+                          </div>
+                      </div>
+                      <div className="mt-auto pt-4">
+                        {/* Barra de Progresso */}
+                        <div className="flex w-full h-[16px]  overflow-hidden">
+                          <div className="w-[440px] bg-[#FBE3BB]"></div>
+                          <div className="bg-[#FBE3BB]"></div>
+                      </div>
+                </div>
+                  </div>
+
+                  {/* Card 9: Relatórios de Desempenho */}
+                  <div className="flex flex-col">
+                      <div className="flex-grow">
+                          <div className="flex-shrink-0 mb-4">
+                              <PiChartLineUp className="w-6 h-6 text-[#F7A622]" />
+                          </div>
+                          <div>
+                              <h4 className="font-bold text-lg text-gray-800">Relatórios de Desempenho</h4>
+                              <p className="text-gray-600 mt-2 text-sm">Acompanhe o histórico e resultados de participações em licitações anteriores, para ajudar a aprimorar a sua competitividade.</p>
+                          </div>
+                      </div>
+                     <div className="mt-auto pt-4">
+                        {/* Barra de Progresso */}
+                        <div className="flex w-full h-[16px]  overflow-hidden">
+                          <div className="w-[440px] bg-[#FCF4E6]"></div>
+                          <div className="bg-[#FCF4E6]"></div>
+                    </div>
+                </div>
+                  </div>
+
+                  {/* Card 10: API de Dados Públicos */}
+                  <div className="flex flex-col">
+                      <div className="flex-grow">
+                          <div className="flex-shrink-0 mb-4">
+                              <PiFileText className="w-6 h-6 text-[#F7A622]" />
+                          </div>
+                          <div>
+                              <h4 className="font-bold text-lg text-gray-800">API de Dados Públicos</h4>
+                              <p className="text-gray-600 mt-2 text-sm">O Portal disponibiliza gratuitamente e a todo interessado o acesso a sua API de dados públicos. Para mais informações acesse o link ou entre em contato com a nossa Central através do "Fale Conosco".</p>
+                          </div>
+                      </div>
+                     <div className="mt-auto pt-4">
+                        {/* Barra de Progresso */}
+                        <div className="flex w-full h-[16px]  overflow-hidden">
+                          <div className="w-[440px] bg-[#FBE3BB]"></div>
+                          <div className="bg-[#FBE3BB]"></div>
+                      </div>
+                </div>
+                  </div>
+                  
+              </div>
+          </div>
+      </section>
       {/* Seção "Transparência com Órgãos Públicos e Licitantes" */}
       <section className="bg-white py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container  px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mb-12">
             <h2 className="text-5xl font-semibold text-[#333333] leading-[64px] mb-6">
               Transparência com Órgãos Públicos e Licitantes
@@ -496,8 +616,7 @@ export default function ContatoPage() {
         </div>
       </section>
 
-
-            {/* Seção "Transparência e a cobrança do serviço" */}
+      {/* Seção "Transparência e a cobrança do serviço" */}
       <section className="bg-white py-16 lg:py-20">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mb-12">
@@ -508,96 +627,150 @@ export default function ContatoPage() {
               A cobrança pelos nossos serviços segue determinações legais e está em conformidade com o acórdão 1121/2023 do TCU, o qual garante o direito à cobrança por participação única no processo licitatório. Nossos custos operacionais são fundamentais para a manutenção da ferramenta e time, e incluem:
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-            
-            <div className="text-left">
+
+            {/* Card 1: Manutenção e Desenvolvimento Tecnológico */}
+            <div className="text-left flex flex-col">
               <div className="mb-4">
                 <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center">
                   <PiFileText className="w-5 h-5 text-yellow-600" />
                 </div>
               </div>
-              <div>
-                <h4 className="font-bold text-lg text-gray-800 mb-2">Manutenção e Desenvolvimento Tecnológico</h4>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Investimos constantemente em tecnologias inovadoras para garantir que o sistema esteja sempre em pleno funcionamento. Nosso compromisso inclui servidor a todas os usuários.
-                </p>
-                <div className="h-1 w-full bg-orange-300 rounded-full"></div>
+              <div className="flex flex-col flex-grow">
+                <div>
+                  <h4 className="font-bold text-lg text-gray-800 mb-2">Manutenção e Desenvolvimento Tecnológico</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Investimos constantemente em tecnologias inovadoras para garantir que o sistema esteja sempre em pleno funcionamento. Nosso compromisso inclui servidor a todas os usuários.
+                  </p>
+                </div>
+                <div className="mt-auto pt-4">
+                  {/* Barra de Progresso */}
+                  <div className="flex w-full h-[16px]  overflow-hidden">
+                    <div className="w-[440px] bg-[#F7A622]"></div>
+                    <div className="bg-[#FCF4E6]"></div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="text-left">
+            {/* Card 2: Suporte e Atendimento Especializado */}
+            <div className="text-left flex flex-col">
               <div className="mb-4">
                 <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center">
                   <PiCursorClick className="w-5 h-5 text-yellow-600" />
                 </div>
               </div>
-              <div>
-                <h4 className="font-bold text-lg text-gray-800 mb-2">Suporte e Atendimento Especializado</h4>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Oferecemos uma equipe de suporte dedicada e qualificada, pronta para auxiliar tanto fornecedores quanto órgãos públicos em todas as etapas do processo licitatório. Esse atendimento personalizado assegura que qualquer dúvida seja esclarecida em tempo hábil, necessária para navegar com tranquilidade pelos processos de licitação.
-                </p>
-                <div className="h-1 w-full bg-orange-300 rounded-full"></div>
+              <div className="flex flex-col flex-grow">
+                <div>
+                  <h4 className="font-bold text-lg text-gray-800 mb-2">Suporte e Atendimento Especializado</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Oferecemos uma equipe de suporte dedicada e qualificada, pronta para auxiliar tanto fornecedores quanto órgãos públicos em todas as etapas do processo licitatório. Esse atendimento personalizado assegura que qualquer dúvida seja esclarecida em tempo hábil, necessária para navegar com tranquilidade pelos processos de licitação.
+                  </p>
+                </div>
+                <div className="mt-auto pt-4">
+                  {/* Barra de Progresso */}
+                  <div className="flex w-full h-[16px]  overflow-hidden">
+                    <div className="w-[440px] bg-[#F9C064]"></div>
+                    <div className="bg-[#F9C064]"></div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="text-left">
+            {/* Card 3: Segurança da Informação */}
+            <div className="text-left flex flex-col">
               <div className="mb-4">
                 <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center">
                   <PiChatsCircle className="w-5 h-5 text-yellow-600" />
                 </div>
               </div>
-              <div>
-                <h4 className="font-bold text-lg text-gray-800 mb-2">Segurança da Informação</h4>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Trabalhamos com protocolos de segurança de todos os níveis, garantindo que as informações de todos os participantes sejam protegidas contra qualquer invasão ou documentos e consultas ou invasões de terceiros. Nossa equipe de segurança possui algumas das melhores tecnologias de cibersegurança para manter o ambiente licitatório confiável e transparente.
-                </p>
-                <div className="h-1 w-full bg-orange-300 rounded-full"></div>
+              <div className="flex flex-col flex-grow">
+                <div>
+                  <h4 className="font-bold text-lg text-gray-800 mb-2">Segurança da Informação</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Trabalhamos com protocolos de segurança de todos os níveis, garantindo que as informações de todos os participantes sejam protegidas contra qualquer invasão ou documentos e consultas ou invasões de terceiros. Nossa equipe de segurança possui algumas das melhores tecnologias de cibersegurança para manter o ambiente licitatório confiável e transparente.
+                  </p>
+                </div>
+                <div className="mt-auto pt-4">
+                  {/* Barra de Progresso */}
+                  <div className="flex w-full h-[16px]  overflow-hidden">
+                    <div className="w-[440px] bg-[#F9D18F]"></div>
+                    <div className="bg-[#F9D18F]"></div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="text-left">
+            {/* Card 4: Conformidade Legal e Regulatória */}
+            <div className="text-left flex flex-col">
               <div className="mb-4">
                 <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center">
                   <PiShieldCheck className="w-5 h-5 text-yellow-600" />
                 </div>
               </div>
-              <div>
-                <h4 className="font-bold text-lg text-gray-800 mb-2">Conformidade Legal e Regulatória</h4>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Investimentos para garantir que todos os nossos processos e a plataforma estejam em total conformidade com as legislações aplicáveis, incluindo as mais recentes atualizações e regulamentações governamentais.
-                </p>
-                <div className="h-1 w-full bg-orange-300 rounded-full"></div>
+              <div className="flex flex-col flex-grow">
+                <div>
+                  <h4 className="font-bold text-lg text-gray-800 mb-2">Conformidade Legal e Regulatória</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Investimentos para garantir que todos os nossos processos e a plataforma estejam em total conformidade com as legislações aplicáveis, incluindo as mais recentes atualizações e regulamentações governamentais.
+                  </p>
+                </div>
+                <div className="mt-auto pt-4">
+                  {/* Barra de Progresso */}
+                  <div className="flex w-full h-[16px]  overflow-hidden">
+                    <div className="w-[440px] bg-[#F9D18F]"></div>
+                    <div className="bg-[#F9D18F]"></div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="text-left">
+            {/* Card 5: Capacitação e Melhoria Contínua */}
+            <div className="text-left flex flex-col">
               <div className="mb-4">
                 <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center">
                   <PiMedal className="w-5 h-5 text-yellow-600" />
                 </div>
               </div>
-              <div>
-                <h4 className="font-bold text-lg text-gray-800 mb-2">Capacitação e Melhoria Contínua</h4>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Oferecemos treinamento e materiais educativos para que nossos usuários possam tirar o máximo proveito da plataforma e dos nossos serviços. Promovemos webinars, cursos e palestras que incluem cursos, webinars e materiais de apoio que auxiliam tanto fornecedores quanto órgão públicos a aproveitar sua ferramenta nas licitações.
-                </p>
-                <div className="h-1 w-full bg-orange-300 rounded-full"></div>
+              <div className="flex flex-col flex-grow">
+                <div>
+                  <h4 className="font-bold text-lg text-gray-800 mb-2">Capacitação e Melhoria Contínua</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Oferecemos treinamento e materiais educativos para que nossos usuários possam tirar o máximo proveito da plataforma e dos nossos serviços. Promovemos webinars, cursos e palestras que incluem cursos, webinars e materiais de apoio que auxiliam tanto fornecedores quanto órgão públicos a aproveitar sua ferramenta nas licitações.
+                  </p>
+                </div>
+                <div className="mt-auto pt-4">
+                  {/* Barra de Progresso */}
+                  <div className="flex w-full h-[16px]  overflow-hidden">
+                    <div className="w-[440px] bg-[#FBE3BB]"></div>
+                    <div className="bg-[#FBE3BB]"></div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="text-left">
+            {/* Card 6: Customização da ferramenta */}
+            <div className="text-left flex flex-col">
               <div className="mb-4">
                 <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center">
                   <PiChartLineUp className="w-5 h-5 text-yellow-600" />
                 </div>
               </div>
-              <div>
-                <h4 className="font-bold text-lg text-gray-800 mb-2">Customização da ferramenta</h4>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Ao atendimento que o Brasil tem legislações das mais diversas determinamos o especialização nas primeiras funcionários de cada região. Isso inclui integração dos sistemas existentes, relativamente customizações necessárias aos entre públicos para que suas rotinas de trabalho não tenham conflitualidade caso as legislações.
-                </p>
-                <div className="h-1 w-full bg-orange-300 rounded-full"></div>
+              <div className="flex flex-col flex-grow">
+                <div>
+                  <h4 className="font-bold text-lg text-gray-800 mb-2">Customização da ferramenta</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Ao atendimento que o Brasil tem legislações das mais diversas determinamos o especialização nas primeiras funcionários de cada região. Isso inclui integração dos sistemas existentes, relativamente customizações necessárias aos entre públicos para que suas rotinas de trabalho não tenham conflitualidade caso as legislações.
+                  </p>
+                </div>
+                <div className="mt-auto pt-4">
+                  {/* Barra de Progresso */}
+                  <div className="flex w-full h-[16px]  overflow-hidden">
+                    <div className="w-[440px] bg-[#FCF4E6]"></div>
+                    <div className="bg-[#FCF4E6]"></div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -621,13 +794,13 @@ export default function ContatoPage() {
 
             <div>
               <p className="text-lg text-gray-600 leading-relaxed">
-                A <span className="text-blue-600 underline">Política de Privacidade</span> garante que todos os dados fornecidos sejam utilizados exclusivamente para melhorar a experiência do usuário, facilitar a participação em licitações e manter a segurança dos processos. Não compartilhamos dados pessoais de terceiros sem consentimento, exceto quando exigido por lei.
+                A <span className="font-bold text-[#0085AC] underline">Política de Privacidade</span> garante que todos os dados fornecidos sejam utilizados exclusivamente para melhorar a experiência do usuário, facilitar a participação em licitações e manter a segurança dos processos. Não compartilhamos dados pessoais de terceiros sem consentimento, exceto quando exigido por lei.
               </p>
             </div>
 
             <div>
               <p className="text-lg text-gray-600 leading-relaxed">
-                A <span className="text-blue-600 underline">Política de Cookies</span> explica como utilizamos cookies para otimizar o funcionamento do site, personalizar conteúdos e oferecer uma navegação mais eficiente. Os usuários podem gerenciar suas preferências a qualquer momento, controlando quais cookies desejam permitir. Nosso compromisso é oferecer uma plataforma segura e transparente, onde o uso de dados pessoais é tratado com o máximo cuidado e respeito.
+                A <span className="font-bold text-[#0085AC] underline">Política de Cookies</span> explica como utilizamos cookies para otimizar o funcionamento do site, personalizar conteúdos e oferecer uma navegação mais eficiente. Os usuários podem gerenciar suas preferências a qualquer momento, controlando quais cookies desejam permitir. Nosso compromisso é oferecer uma plataforma segura e transparente, onde o uso de dados pessoais é tratado com o máximo cuidado e respeito.
               </p>
             </div>
 
@@ -636,9 +809,9 @@ export default function ContatoPage() {
       </section>
 
 
-            {/* Seção "Comprometidos com a Transparência e a Ética" */}
+      {/* Seção "Comprometidos com a Transparência e a Ética" */}
       <section className="bg-white py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-6">
               Comprometidos com a Transparência e a Ética
@@ -653,47 +826,60 @@ export default function ContatoPage() {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[150px]">
             
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Canal de Denúncias</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                O Portal de Compras Públicas mantém um canal seguro e sigiloso para relatar práticas inadequadas, fraudes, irregularidades ou violações legais. As denúncias podem ser feitas pelo e-mail <span className="text-blue-600 underline">portaloetica.com.br/portaldecompraspublicas</span>, pelo canal <span className="text-blue-600 underline">https://oetica.com.br/portaldecompraspublicas</span> ou diretamente na nossa central e são tratadas com seriedade e análise imparcial, reforçando nosso compromisso com a ética, a transparência e a confiança entre compradores e fornecedores.
-              </p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center">
-                    <PiPhoneCall className="w-4 h-4 text-yellow-600" />
-                  </div>
-                  <div>
+            {/* --- Card 1: Canal de Denúncias --- */}
+            <div className="bg-[#F9F9F8] rounded-[40px] shadow-[0_3px_6px_0_rgba(69,70,70,0.1)] overflow-hidden flex flex-col">
+              {/* Conteúdo do Card */}
+              <div className="px-[54px] py-[46px] flex-grow flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">Canal de Denúncias</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    O Portal de Compras Públicas mantém um canal seguro e sigiloso para relatar práticas inadequadas, fraudes, irregularidades ou violações legais. As denúncias podem ser feitas pelo e-mail <span className="text-[#0085AC] underline">portaloetica.com.br/portaldecompraspublicas</span>, pelo canal <span className="text-[#0085AC] underline">https://oetica.com.br/portaldecompraspublicas</span> ou diretamente na nossa central e são tratadas com seriedade e análise imparcial, reforçando nosso compromisso com a ética, a transparência e a confiança entre compradores e fornecedores.
+                  </p>
+                </div>
+                <div className="space-y-3 mt-4">
+                  <div className="flex items-center space-x-3">
+                    <PiPhoneCall className="w-6 h-6 text-[#F7A622]" />
                     <p className="font-semibold text-gray-800">3003-5455 (24h)</p>
-                    <p className="text-blue-600 text-sm underline">denuncias@portaldecompraspublicas.com.br (validar)</p>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <p className="font-['DM_Sans'] font-semibold text-[20px] leading-[120%] tracking-[0%] text-[#0085AC] underline">
+                      denuncias@portaldecompraspublicas.com.br (validar)
+                    </p>
+                    <PiHandPointing className="w-6 h-6 text-[#F7A622]" />
                   </div>
                 </div>
               </div>
-              
-              <div className="h-2 w-full bg-orange-300 rounded-full"></div>
+              {/* Barra Inferior */}
+              <div className="flex h-[14px]">
+                <div className="w-[661px] bg-[#F7A622]"></div>
+                <div className="w-[97px] bg-[#FBE3BB]"></div>
+              </div>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Relação com a imprensa</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                Prezamos pelo diálogo aberto com a imprensa, oferecendo informações claras e precisas sobre nossas atividades e processos. Nosso setor de comunicação está disponível para atender solicitações pelo e-mail abaixo, fortalecendo a transparência e a integridade em nossas ações.
-              </p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center">
-                    <PiHandPointing className="w-4 h-4 text-yellow-600" />
-                  </div>
-                  <div>
-                    <p className="text-blue-600 text-sm underline">comunicacao@portaldecompraspublicas.com.br</p>
+            {/* --- Card 2: Relação com a imprensa --- */}
+            <div className="bg-[#F9F9F8] rounded-[40px] shadow-[0_3px_6px_0_rgba(69,70,70,0.1)] overflow-hidden flex flex-col">
+              {/* Conteúdo do Card */}
+              <div className="px-[54px] py-[46px] flex-grow flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">Relação com a imprensa</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Prezamos pelo diálogo aberto com a imprensa, oferecendo informações claras e precisas sobre nossas atividades e processos. Nosso setor de comunicação está disponível para atender solicitações pelo e-mail abaixo, fortalecendo a transparência e a integridade em nossas ações.
+                  </p>
+                </div>
+                <div className="space-y-3 mt-4">
+                  <div className="flex items-center space-x-3">
+                    <PiHandPointing className="w-6 h-6 text-[#F7A622]" />
+                    <p className="font-['DM_Sans'] font-semibold text-[20px] leading-[120%] tracking-[0%] text-[#0085AC] underline">comunicacao@portaldecompraspublicas.com.br</p>
                   </div>
                 </div>
               </div>
-              
-              <div className="h-2 w-full bg-orange-300 rounded-full"></div>
+              {/* Barra Inferior */}
+              <div className="flex h-[14px]">
+                <div className="w-[661px] bg-[#F7A622]"></div>
+                <div className="w-[97px] bg-[#FBE3BB]"></div>
+              </div>
             </div>
 
           </div>
