@@ -33,13 +33,13 @@ export const SuppliersTable = ({fornecedores}: fornecedorsTableProps) => {
             <table className="w-full text-left table-fixed">
                <thead className="bg-[#F7A622] text-white uppercase text-sm">
                   <tr>
-                     <th scope="col" className="w-[25%] py-[10px] font-bold text-center tracking-wider">EMPRESA</th>
-                     <th scope="col" className="w-[15%] py-[10px] font-bold text-center tracking-wider">CNPJ</th>
-                     <th scope="col" className="w-[15%] py-[10px] font-bold text-center tracking-wider">SEGMENTO</th>
-                     <th scope="col" className="w-[16%] py-[10px] font-bold text-center tracking-wider">LOCALIZAÇÃO</th>
-                     <th scope="col" className="w-[20%] py-[10px] font-bold text-center tracking-wider">CREDENCIAMENTO</th>
-                     <th scope="col" className="w-[12%] py-[10px] font-bold text-center tracking-wider">STATUS</th>
-                     <th scope="col" className="w-[20%] py-[10px] font-bold text-center tracking-wider">ESPECIALIDADES</th>
+                     <th scope="col" className="w-[25%] py-[10px] font-dm-sans font-bold text-center tracking-wider">EMPRESA</th>
+                     <th scope="col" className="w-[15%] py-[10px] font-dm-sans font-bold text-center tracking-wider">CNPJ</th>
+                     <th scope="col" className="w-[15%] py-[10px] font-dm-sans font-bold text-center tracking-wider">SEGMENTO</th>
+                     <th scope="col" className="w-[16%] py-[10px] font-dm-sans font-bold text-center tracking-wider">LOCALIZAÇÃO</th>
+                     <th scope="col" className="w-[20%] py-[10px] font-dm-sans font-bold text-center tracking-wider">CREDENCIAMENTO</th>
+                     <th scope="col" className="w-[12%] py-[10px] font-dm-sans font-bold text-center tracking-wider">STATUS</th>
+                     <th scope="col" className="w-[20%] py-[10px] font-dm-sans font-bold text-center tracking-wider">ESPECIALIDADES</th>
                   </tr>
                </thead>
                <tbody className="divide-y">
@@ -61,29 +61,29 @@ export const SuppliersTable = ({fornecedores}: fornecedorsTableProps) => {
                         <td className="py-[18px] text-sm">
                            <div className="flex items-start justify-center gap-2">
                               <div className="flex flex-col items-center justify-center">
-                                 <span className="flex items-center"><PiCalendar size={16} className="text-[#6B7280] mt-1" />{format(new Date(fornecedor.dtCredenciamento), 'dd/MM/yyyy')}</span>
-                                 <span className="text-xs text-[#6B7280]">Válido até: {format(new Date(fornecedor.dtCredenciamento), 'dd/MM/yyyy')}</span>
+                                 <span className="flex items-center"><PiCalendar size={16} className="text-[#6B7280] mt-1" />{format(new Date(fornecedor.dtCredenciamentoInicio), 'dd/MM/yyyy')}</span>
+                                 <span className="text-xs text-[#6B7280]">Válido até: {format(new Date(fornecedor.dtCredenciamentoFim), 'dd/MM/yyyy')}</span>
                               </div>
                            </div>
                         </td>
                         <td className="py-[18px]">
-                           <div className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold ${fornecedor.status === 'Habilitado'
+                           <div className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold ${fornecedor.statusDescricao === 'Habilitado'
                                  ? 'bg-[#1AB0C3] text-white'
                                  : 'bg-[#FEE2E2] text-[#B91C1C]'
                               }`}>
-                              {fornecedor.status === 'Habilitado' ? (
+                              {fornecedor.statusDescricao === 'Habilitado' ? (
                                  <PiCheck size={14} className="mr-1" />
                               ) : (
                                  <PiWarningCircle size={14} className="mr-1" />
                               )}
-                              {fornecedor.status}
+                              {fornecedor.statusDescricao}
                            </div>
                         </td>
                         <td className="py-[18px]">
                            <div className="flex flex-wrap gap-2">
-                              {fornecedor.segmentos.map((specialty, index) => (
+                              {fornecedor.especialidades.map((speciality, index) => (
                                  <span key={index} className="inline-flex items-center rounded-full bg-[#F3F4F6] px-3 py-1 text-xs font-semibold text-[#374151]">
-                                    {specialty}
+                                    {speciality}
                                  </span>
                               ))}
                            </div>

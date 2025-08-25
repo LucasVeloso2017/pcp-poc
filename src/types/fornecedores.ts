@@ -4,8 +4,11 @@ export interface Fornecedores {
   id: string;                 
   empresa: string;
   cnpj: string;
-  dtCredenciamento: string;   
-  status: string;             
-  segmentos: string[];        
+  dtCredenciamentoInicio: string;   
+  dtCredenciamentoFim: string;   
+  status: number;     
+  statusDescricao: string;        
+  segmentos: string[];     
+  especialidades: string[];   
   enderecos: Endereco[]; 
 }
